@@ -1,37 +1,44 @@
-.invisivel{
-    display:none;
-  }
-  .visivel{
-    display:inline;
-  }
-  .inicial {
-    text-align: center;
-    font-size: 100px;
-    background-color: lightgrey;
-    width: 150px;
-    height: 200px;
-    border: 15px solid green;
-    padding: 10px;
-    margin: 20px;
-  }
-  .acertou {
-    text-align: center;
-    color: yellow;
-    background-color: LawnGreen;
-    width: 150px;
-    height: 200px;
-    border: 15px solid yellow;
-    padding: 10px;
-    margin: 20px;
-  }
-  .errou {
-    text-align: center;
-    font-size: 100px;
-    color: white;
-    background-color: red;
-    width: 150px;
-    height: 200px;
-    border: 15px solid black;
-    padding: 10px;
-    margin: 20px;
-  }
+..inicial {
+  width: 100px;
+  height: 150px;
+  background-color: #e0e0e0;
+  margin: 10px;
+  text-align: center;
+  line-height: 150px;
+  font-size: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inicial:hover {
+  background-color: #ccc;
+}
+
+.correta {
+  background-color: #d4edda;
+  color: green;
+  font-size: 32px;
+  animation: destaque 0.5s ease-out;
+}
+
+.errada {
+  background-color: #f8d7da;
+  color: red;
+  font-size: 32px;
+  animation: tremor 0.3s ease;
+}
+
+@keyframes destaque {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes tremor {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
